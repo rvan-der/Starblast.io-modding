@@ -623,7 +623,7 @@ this.tick = function(game) {
               ship.set({score:(checkpoints.length*100000)-(lastfinished*1000)});
             }
           }else{ 
-            ship.set({score:ship.custom.checkpoint*1000+checkpoints.length*ship.custom.lap});
+            ship.set({score:ship.custom.checkpoint*1000+checkpoints.length*ship.custom.lap*1000});
             writeTextLarge(ship," ");
             if(ship.custom.checkpoint > 1||ship.custom.lap>0){
               if(laps>0)
