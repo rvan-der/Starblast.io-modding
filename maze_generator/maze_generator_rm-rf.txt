@@ -57,20 +57,20 @@ function initCellMap(){
       cellMap[i][j].neighbours['west'] = cellMap[i][mod(j - 1, CELLS)];
     }
   }
-  return cellMap;
+  return (cellMap);
 }
 
 function isSurrounded(cell){
   for (var i = 0; i < 4; i++){
     if (!cell.neighbours[DIRECTIONS[i]].visited){
-      return false;
+      return (false);
     }
   }
-  return true;
+  return (true);
 }
 
 function selectRandomDirection(cell){
-  // try random direction, if already visited, try next one until found unvisited
+  // try random direction, if already visited try next one until found unvisited
   var i = Math.floor(Math.random() * 4); // random int from 0 to 3
   var inc = 1;
   if (Math.random() >= 0.5){
@@ -112,8 +112,8 @@ function selectNewStart(cMap){
   }
   for (var i = modeI * (CELLS - 1); i !== limI; i += incI){
     for (var j = modeJ * (CELLS - 1); j !== limJ; j += incJ){
-      if (!cMap[i][j].visited){
-        return cMap[i][j];
+      if (cMap[i][j].visited && !isSurrounded(cMap[i][j])){
+        return (cMap[i][j]);
       }
     }
   }
@@ -126,12 +126,17 @@ function generateMaze(){
   var line1;
   var line2;
   var start;
+  //carve the maze
   cellMap = initCellMap();
+  cellMap[Math.floor(CELLS / 2)][Math.floor(CELLS / 2)].visited = true;
   while (true){
     start = selectNewStart(cellMap);
-    if (!start) break;
+    if (start === undefined){
+      break;
+    }
     walk(start);
   }
+  //create the string for Starblast map
   for (var i = 0; i < CELLS ; i++){
     line1 = "";
     line2 = "";
@@ -142,13 +147,16 @@ function generateMaze(){
       line2 += "9";
     }
     line1 += "\n";
-    if (i < CELLS - 1) line2 += "\n";
+    if (i < CELLS - 1){
+      line2 += "\n";
+    }
     maze += line1;
     maze += line2;
   }
+  return maze
 }
 
-map = generateMaze();
+var map = generateMaze();
 
 this.options = {
   // see documentation for options reference
