@@ -1,10 +1,14 @@
 'use strict'
 
 var MAP_SIZE = 30;
-var CELLS = Math.floor(MAP_SIZE / 2);
-var DIRECTIONS = ['north', 'south', 'east', 'west'];
+if (MAP_SIZE < 20){
+  MAP_SIZE = 20;
+}
 //ensure MAP_SIZE is an even number
-MAP_SIZE = CELLS * 2
+MAP_SIZE = Math.floor(MAP_SIZE / 2) * 2
+
+var CELLS = MAP_SIZE / 2;
+var DIRECTIONS = ['north', 'south', 'east', 'west'];
 
 function Cell() {
   this.visited = false;
@@ -30,7 +34,7 @@ function inverseDirection(direction){
     case 'west':
       return 'east';
     default:
-      return undefined;
+      return (undefined);
   }
 }
 
@@ -79,7 +83,7 @@ function selectRandomDirection(cell){
   while (cell.neighbours[DIRECTIONS[i]].visited){
     i = mod(i + inc, 4);
   }
-  return DIRECTIONS[i];
+  return (DIRECTIONS[i]);
 }
 
 function walk(start){
@@ -117,7 +121,7 @@ function selectNewStart(cMap){
       }
     }
   }
-  return undefined
+  return (undefined);
 }
 
 function generateMaze(){
@@ -153,7 +157,7 @@ function generateMaze(){
     maze += line1;
     maze += line2;
   }
-  return maze
+  return (maze);
 }
 
 var map = generateMaze();
