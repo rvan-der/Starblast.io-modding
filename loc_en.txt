@@ -36,3 +36,57 @@ Change ship
 NOT READY
 >ready
 READY
+>language
+English
+>changeLanguage
+Switch language
+>youAreNotReady
+YOU ARE NOT READY [U]
+>raceStartsIn
+Race starts in 
+>waitingForPlayers
+Waiting for other players...
+>numberPlayersReady
+ ready)
+>startingSoon
+Starting in 
+>startingSoonSeconds
+ seconds...
+>youreAFK
+You're AFK. Press [I] to continue racing.
+>shame
+SHAME
+>waitAllPlayersFinish
+Wait until all players finish the race (
+>waitAllPlayersFinishSoFar
+ so far) or wait 
+>seconds
+seconds
+>pressUWhenReady
+Press U when ready.
+>credits
+Credits
+>votekick
+Votekick
+>chooseShip
+Change ship
+>notReady
+NOT READY
+>ready
+READY
+>kickPlayer
+Kick 
+>dontKickPlayer
+Don't kick
+>notAFK
+NOT AFK
+>AFK
+AFK
+>back
+Close
+>proposeKick
+Votekick 
+>pship
+Previous ship
+>nship
+Next ship
