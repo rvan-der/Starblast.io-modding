@@ -1,0 +1,12 @@
+notReady
+ВЫ НЕ ГОТОВЫ [U]
+raceStartsIn
+Заезд начнется через 
+waitingForPlayers
+Ждем на остальных игроков...
+numberPlayersReady
+ готовы)
+startingSoon
+Начинаем через 
+startingSoonSeconds
+ секунд...
