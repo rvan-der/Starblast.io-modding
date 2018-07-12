@@ -1,0 +1,12 @@
+notReady
+YOU ARE NOT READY [U]
+raceStartsIn
+Race starts in 
+waitingForPlayers
+Waiting for other players...
+numberPlayersReady
+ ready)
+startingSoon
+Starting in 
+startingSoonSeconds
+ seconds...
