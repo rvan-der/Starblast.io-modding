@@ -1,12 +1,38 @@
-notReady
+>language
+English
+>changeLanguage
+Switch language
+>youAreNotReady
 YOU ARE NOT READY [U]
-raceStartsIn
+>raceStartsIn
 Race starts in 
-waitingForPlayers
+>waitingForPlayers
 Waiting for other players...
-numberPlayersReady
+>numberPlayersReady
  ready)
-startingSoon
+>startingSoon
 Starting in 
-startingSoonSeconds
+>startingSoonSeconds
  seconds...
+>youreAFK
+You're AFK. Press [I] to continue racing.
+>shame
+SHAME
+>waitAllPlayersFinish
+Wait until all players finish the race (
+>waitAllPlayersFinishSoFar
+ so far) or wait 
+>seconds
+seconds
+>pressUWhenReady
+Press U when ready.
+>credits
+Credits
+>votekick
+Votekick
+>chooseShip
+Change ship
+>notReady
+NOT READY
+>ready
+READY
