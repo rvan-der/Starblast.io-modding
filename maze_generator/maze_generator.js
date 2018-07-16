@@ -32,7 +32,7 @@
 // Use the MAP_SIZE variable at the beginning of the code to indicate the desired size of
 // your map and don't forget to pass it to the 'map_size' option.
 // The function 'generateMaze()' returns the map (as you can see towards the end of the file),
-// which you have to pass to the 'custom_map' option..
+// which you have to pass to the 'custom_map' option.
 // Use and modify at your own will and risks. Have fun! ;)
 
 'use strict'
