@@ -3,10 +3,12 @@
 // This file contains a JavaScript tool to generate a maze map for Starblast modding.
 // The algorithm used is named 'Hunt and Kill'.
 // It does not implement any game or rules. It is just the minimal code to generate the map.
-// You can use it simply by copy-pasting the code into your own mod file (without the options
+// You can directly run it in the modding interface to make tests and previews.
+// To use it, simply copy-paste the code into your own mod file (without the options
 // and tick part of course). Use the MAP_SIZE variable at the beginning of the code to indicate
 // the dezired size of your map and don't forget to pass it to the 'map_size' option.
-// The function 'generateMaze()' returns the map as you can see towards the end of the file.
+// The function 'generateMaze()' returns the map (as you can see towards the end of the file),
+// which you have to pass to the 'custom_map' option..
 // No licence. Use and modify at your own will and risks. Have fun! ;)
 
 'use strict'
