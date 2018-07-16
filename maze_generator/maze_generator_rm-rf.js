@@ -1,3 +1,25 @@
+//MIT License
+//
+//Copyright (c) 2018 rvan-der
+//
+//Permission is hereby granted, free of charge, to any person obtaining a copy
+//of this software and associated documentation files (the "Software"), to deal
+//in the Software without restriction, including without limitation the rights
+//to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//copies of the Software, and to permit persons to whom the Software is
+//furnished to do so, subject to the following conditions:
+//
+//The above copyright notice and this permission notice shall be included in all
+//copies or substantial portions of the Software.
+//
+//THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+//SOFTWARE.
+//
 // Author: rvan-der (rm -rf /)
 //
 // This file contains a JavaScript tool to generate a maze map for Starblast modding.
@@ -7,11 +29,11 @@
 // To use it, simply copy-paste the code into your own mod file (without the options
 // and tick part of course).
 // /!\ Beware of variables and functions naming conflicts. /!\
-// Use the MAP_SIZE variable at the beginning of the code to indicate the dezired size of
+// Use the MAP_SIZE variable at the beginning of the code to indicate the desired size of
 // your map and don't forget to pass it to the 'map_size' option.
 // The function 'generateMaze()' returns the map (as you can see towards the end of the file),
 // which you have to pass to the 'custom_map' option..
-// No licence. Use and modify at your own will and risks. Have fun! ;)
+// Use and modify at your own will and risks. Have fun! ;)
 
 'use strict'
 
