@@ -1,11 +1,12 @@
 'use strict'
 
 var MAP_SIZE = 30;
+//ensure MAP_SIZE is an even number
+MAP_SIZE = Math.floor(MAP_SIZE / 2) * 2
+// default to minimum value if too small
 if (MAP_SIZE < 20){
   MAP_SIZE = 20;
 }
-//ensure MAP_SIZE is an even number
-MAP_SIZE = Math.floor(MAP_SIZE / 2) * 2
 
 var CELLS = MAP_SIZE / 2;
 var DIRECTIONS = ['north', 'south', 'east', 'west'];
@@ -100,17 +101,19 @@ function walk(start){
 }
 
 function selectNewStart(cMap){
-  var modeI = Math.floor(Math.random() * 2); // 0 or 1
-  var modeJ = Math.floor(Math.random() * 2); //
-  var incI = 1;
-  var incJ = 1;
-  var limI = CELLS;
-  var limJ = CELLS;
-  if (modeI){
+  // modes determine the corner of the map the search starts at
+  // randomization homogenizes the pattern of the maze
+  var modeI = Math.floor(Math.random() * 2); // 0 or 1 <=> bottom or up
+  var modeJ = Math.floor(Math.random() * 2); // 0 or 1 <=> left or right
+  var incI = 1; // increments
+  var incJ = 1; //
+  var limI = CELLS; // limits
+  var limJ = CELLS; //
+  if (modeI){ // negative increment if i starts at bottom
     incI = -1;
     limI = -1;
   }
-  if (modeJ){
+  if (modeJ){ // negative increment if j starts at right 
     incJ = -1;
     limJ = -1;
   }
@@ -132,6 +135,7 @@ function generateMaze(){
   var start;
   //carve the maze
   cellMap = initCellMap();
+  //set center cell of the map to 'visited' so it'll be the first one selected
   cellMap[Math.floor(CELLS / 2)][Math.floor(CELLS / 2)].visited = true;
   while (true){
     start = selectNewStart(cellMap);
@@ -164,7 +168,6 @@ var map = generateMaze();
 
 this.options = {
   // see documentation for options reference
-  root_mode: "survival",
   custom_map: map,
   map_size: MAP_SIZE
 };
